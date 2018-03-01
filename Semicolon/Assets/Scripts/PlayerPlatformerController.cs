@@ -14,12 +14,14 @@ public class PlayerPlatformerController : PhysicsObject
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private bool bJump = true;
+    private float gravity;
 
     // Use this for initialization
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        gravity = gravityModifier;
     }
 
     protected override void ComputeVelocity()
@@ -34,7 +36,7 @@ public class PlayerPlatformerController : PhysicsObject
             {
                 iNumberOfJumpsTaken = 0;
                 velocity.y = fJumpSpeed;
-                Debug.Log("Jumps Taken " + iNumberOfJumpsTaken + " Jumps Allowed " + iNumberOfJumpsAllowed);
+                Debug.Log("Jumps Taken " + iNumberOfJumpsTaken + " Jumps Allowed " + iNumberOfJumpsAllowed + " Collectables " + iCollectables);
                 iNumberOfJumpsTaken++;
                 bJump = iNumberOfJumpsAllowed > iNumberOfJumpsTaken;
             }
@@ -47,17 +49,30 @@ public class PlayerPlatformerController : PhysicsObject
             }
         }
 
-        bool flipSprite = (spriteRenderer.flipX ? (move.x > 0.01f) : (move.x < 0.01f));
+        bool flipSprite = (spriteRenderer.flipX ? (move.x > 0) : (move.x < 0));
         if (flipSprite)
         {
             spriteRenderer.flipX = !spriteRenderer.flipX;
         }
 
+        if (move.x == 0 && grounded)
+        {
+            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        }
+        else
+        {
+            GetComponent<Rigidbody2D>().constraints = ~RigidbodyConstraints2D.FreezePosition;
+        }
 
         animator.SetBool("grounded", grounded);
         animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / fMaxSpeed);
 
         targetVelocity = move * fMaxSpeed;
+    }
+
+    void getCollectable()
+    {
+        iCollectables++;
     }
 }
 
