@@ -7,9 +7,9 @@ public class ExitDoor : MonoBehaviour {
     [SerializeField]
     GameObject Player;
     [SerializeField]
-    int collectablesNeeded = 3;
+    public int collectablesNeeded = 3;
     [SerializeField]
-    string nextScene;
+    GameObject eventBox;
     public bool bProgress;
 	// Use this for initialization
 	void Start () {
@@ -28,7 +28,8 @@ public class ExitDoor : MonoBehaviour {
     {
         if (bProgress)
         {
-            SceneManager.LoadScene(nextScene);
+            eventBox.SetActive(true);
+            eventBox.GetComponent<EventBox>().SendMessage("levelComplete");
         }
     }
 }

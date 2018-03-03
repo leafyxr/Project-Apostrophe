@@ -21,7 +21,7 @@ public class Collectable : MonoBehaviour {
 	void Update () {
         if (bIsCollected)
         {
-            transform.position = Vector2.MoveTowards(transform.position, new Vector2(Player.transform.position.x-0.5f, Player.transform.position.y),0.08f);
+            Destroy(gameObject,.1f);
         }
         tempPos = transform.position;
         tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * hoverFrequency) * hoverAmplitude;
