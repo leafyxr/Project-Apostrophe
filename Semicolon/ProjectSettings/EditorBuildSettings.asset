@@ -9,5 +9,5 @@ EditorBuildSettings:
     path: Assets/Scenes/School.unity
     guid: 61b200332aca8f348a85fe36c38c33be
   - enabled: 1
-    path: Assets/Scenes/Test.unity
-    guid: 269eab4b4c42f454899246a50f678057
+    path: Assets/Scenes/SchoolDream.unity
+    guid: bfc4a45c6d47ebe44bbd0efe1b123581
