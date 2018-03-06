@@ -189,8 +189,9 @@ MonoBehaviour:
   iNumberOfJumpsAllowed: 2
   iCollectables: 0
   RespawnPoint: {fileID: 0}
+  eventBox: {fileID: 0}
   CurrentHealth: 0
-  fallTime: 0.3
+  fallTime: 0.4
   maxFallSpeed: 7
 --- !u!124 &124897251223205128
 Behaviour:

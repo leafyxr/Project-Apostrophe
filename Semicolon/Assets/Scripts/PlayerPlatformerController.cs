@@ -72,7 +72,7 @@ public class PlayerPlatformerController : PhysicsObject
         {
             if (airTime > fallTime)
             {
-                takeDamage();
+                takeDamage(Mathf.RoundToInt(airTime/fallTime));
             }
             airTime = 0;
         }
@@ -87,9 +87,9 @@ public class PlayerPlatformerController : PhysicsObject
         targetVelocity = move * fMaxSpeed;
     }
 
-    private void takeDamage()
+    private void takeDamage(int iDamage)
     {
-        CurrentHealth--;
+        CurrentHealth=CurrentHealth-iDamage;
         if (CurrentHealth == 0)
         {
             eventBox.SetActive(true);
@@ -106,6 +106,10 @@ public class PlayerPlatformerController : PhysicsObject
     {
         CurrentHealth = MaxHealth;
         transform.position = RespawnPoint.transform.position;
+    }
+    public void healthPickup()
+    {
+        CurrentHealth++;
     }
     
 }

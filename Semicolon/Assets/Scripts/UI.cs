@@ -53,23 +53,43 @@ public class UI : MonoBehaviour {
             }
             else if (currentHealth == 4)
             {
+                setHeart(Health1, heart);
+                setHeart(Health2, heart);
+                setHeart(Health3, heart);
+                setHeart(Health4, heart);
                 setHeart(Health5, damagedHeart);
             }
             else if (currentHealth == 3)
             {
+                setHeart(Health1, heart);
+                setHeart(Health2, heart);
+                setHeart(Health3, heart);
                 setHeart(Health4, damagedHeart);
+                setHeart(Health5, damagedHeart);
             }
             else if (currentHealth == 2)
             {
+                setHeart(Health1, heart);
+                setHeart(Health2, heart);
                 setHeart(Health3, damagedHeart);
+                setHeart(Health4, damagedHeart);
+                setHeart(Health5, damagedHeart);
             }
             else if (currentHealth == 1)
             {
+                setHeart(Health1, heart);
                 setHeart(Health2, damagedHeart);
+                setHeart(Health3, damagedHeart);
+                setHeart(Health4, damagedHeart);
+                setHeart(Health5, damagedHeart);
             }
             else if (currentHealth == 0)
             {
                 setHeart(Health1, damagedHeart);
+                setHeart(Health2, damagedHeart);
+                setHeart(Health3, damagedHeart);
+                setHeart(Health4, damagedHeart);
+                setHeart(Health5, damagedHeart);
             }
             CurrentHeartsDisplayed = currentHealth;
         }

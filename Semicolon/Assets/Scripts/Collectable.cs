@@ -10,6 +10,7 @@ public class Collectable : MonoBehaviour {
     Vector2 tempPos = new Vector2();
     public float hoverAmplitude = 0.5f;
     public float hoverFrequency = 1f;
+    public bool healthup;
 
 
     // Use this for initialization
@@ -32,7 +33,14 @@ public class Collectable : MonoBehaviour {
         if (!bIsCollected)
         {
             bIsCollected = true;
-            Player.GetComponent<PlayerPlatformerController>().SendMessage("getCollectable");
+            if (healthup)
+            {
+                Player.GetComponent<PlayerPlatformerController>().SendMessage("healthPickup");
+            }
+            else
+            {
+                Player.GetComponent<PlayerPlatformerController>().SendMessage("getCollectable");
+            }
         }
     }
 }
