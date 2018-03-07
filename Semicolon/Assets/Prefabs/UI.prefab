@@ -418,6 +418,7 @@ MonoBehaviour:
   ObjText: {fileID: 114780988612684396}
   heart: {fileID: 21300000, guid: f88ed87d28829494cb3ebf03232df965, type: 3}
   damagedHeart: {fileID: 21300002, guid: f88ed87d28829494cb3ebf03232df965, type: 3}
+  eventBox: {fileID: 0}
   levelObjective: 'Collect your Belongings '
 --- !u!114 &114963073366242454
 MonoBehaviour:

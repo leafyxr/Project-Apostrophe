@@ -124,6 +124,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   hoverAmplitude: 0.03
   hoverFrequency: 1
+  healthup: 0
 --- !u!198 &198334517814691794
 ParticleSystem:
   m_ObjectHideFlags: 1

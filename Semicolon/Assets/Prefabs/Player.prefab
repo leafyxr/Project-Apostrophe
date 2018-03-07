@@ -188,8 +188,7 @@ MonoBehaviour:
   fJumpSpeed: 8.5
   iNumberOfJumpsAllowed: 2
   iCollectables: 0
-  RespawnPoint: {fileID: 0}
-  eventBox: {fileID: 0}
+  eventBox: {fileID: 1463163506022878, guid: d21d56d96b3447c41920b12dac16514e, type: 2}
   CurrentHealth: 0
   fallTime: 0.4
   maxFallSpeed: 7

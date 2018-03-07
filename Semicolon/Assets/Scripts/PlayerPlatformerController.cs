@@ -11,8 +11,6 @@ public class PlayerPlatformerController : PhysicsObject
     private int iNumberOfJumpsTaken = 0;
     public int iCollectables = 0;
     [SerializeField]
-    GameObject RespawnPoint;
-    [SerializeField]
     GameObject eventBox;
 
     private SpriteRenderer spriteRenderer;
@@ -87,10 +85,10 @@ public class PlayerPlatformerController : PhysicsObject
         targetVelocity = move * fMaxSpeed;
     }
 
-    private void takeDamage(int iDamage)
+    public void takeDamage(int iDamage)
     {
         CurrentHealth=CurrentHealth-iDamage;
-        if (CurrentHealth == 0)
+        if (CurrentHealth <= 0)
         {
             eventBox.SetActive(true);
             eventBox.GetComponent<EventBox>().SendMessage("gameOver");
@@ -101,15 +99,12 @@ public class PlayerPlatformerController : PhysicsObject
     {
         iCollectables++;
     }
-
-    private void respawn()
-    {
-        CurrentHealth = MaxHealth;
-        transform.position = RespawnPoint.transform.position;
-    }
     public void healthPickup()
     {
-        CurrentHealth++;
+        if (CurrentHealth < 5)
+        {
+            CurrentHealth++;
+        }
     }
     
 }

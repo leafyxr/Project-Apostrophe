@@ -79,5 +79,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
   collectablesNeeded: 3
-  nextScene: School
+  eventBox: {fileID: 0}
   bProgress: 0
