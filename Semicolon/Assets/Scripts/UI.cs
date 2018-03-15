@@ -29,8 +29,6 @@ public class UI : MonoBehaviour {
     public string levelObjective;
     private int CurrentHeartsDisplayed;
     private int currentHealth;
-    
-
 
     // Use this for initialization
     void Start () {
