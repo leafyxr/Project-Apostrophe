@@ -41,7 +41,7 @@ public class EventBox : MonoBehaviour {
     }
     public void exitGame()
     {
-        Application.Quit();
+        SceneManager.LoadScene("Menu");
         Time.timeScale = 1;
     }
 }

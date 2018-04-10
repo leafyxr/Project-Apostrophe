@@ -384,7 +384,7 @@ Prefab:
     - target: {fileID: 114825409681346904, guid: d21d56d96b3447c41920b12dac16514e,
         type: 2}
       propertyPath: nextScene
-      value: SchoolDream
+      value: TestDialouge
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d21d56d96b3447c41920b12dac16514e, type: 2}
