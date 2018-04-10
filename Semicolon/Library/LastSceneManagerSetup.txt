@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/SchoolDream.unity
+- path: Assets/Scenes/TestDialouge.unity
   isLoaded: 1
   isActive: 1
