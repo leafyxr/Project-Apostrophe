@@ -21,8 +21,10 @@ public class PlayerPlatformerController : PhysicsObject
     public float fallTime = 0.3f;//Default fall time & speed causes damage after falling 5 tiles
     private float airTime;
     public float maxFallSpeed = 7;
+    private bool paused;
     void Awake()//Start
     {
+        paused = false;
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         CurrentHealth = MaxHealth;
@@ -30,6 +32,17 @@ public class PlayerPlatformerController : PhysicsObject
 
     protected override void ComputeVelocity()//Update
     {
+        if (Input.GetButtonDown("Pause"))
+        {
+            paused = !paused;
+            eventBox.SetActive(true);
+            eventBox.GetComponent<EventBox>().pauseGame(paused);
+            if (!paused)
+            {
+                eventBox.SetActive(false);
+            }
+            
+        }
         Vector2 move = Vector2.zero;//default move speed if no input
 
         move.x = Input.GetAxis("Horizontal");//move speed altered by horizontal inputs

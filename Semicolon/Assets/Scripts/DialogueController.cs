@@ -2,20 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class DialogueController : MonoBehaviour {
     public DialogueTrigger dialogue;
     public DialogueManager dialogueManager;
     public bool dialogueActive;
     public string nextScene;
-	// Use this for initialization
-	void Start () {
+    [SerializeField]
+    GameObject eventBox;
+    private bool paused;
 
-	}
+    // Use this for initialization
+    void Start () {
+        paused = false;
+        eventBox.SetActive(false);
+    }
     // Update is called once per frame
     void Update () {
         dialogueActive = dialogueManager.active;
-        if (dialogueActive&&Input.anyKeyDown)
+        if (Input.GetButtonDown("Pause"))
+        {
+            paused = !paused;
+            eventBox.SetActive(true);
+            eventBox.GetComponent<EventBox>().pauseGame(paused);
+            if (!paused)
+            {
+                eventBox.SetActive(false);
+            }
+
+        }
+        else if (dialogueActive&&Input.anyKeyDown)
         {
             dialogueManager.displayNextLine();
         }
@@ -27,11 +44,12 @@ public class DialogueController : MonoBehaviour {
         {
             dialogue.triggerDialogue();
         }
-	}
+    }
 
     public void endScene()
     {
-        SceneManager.LoadScene(nextScene);
+        eventBox.SetActive(true);
+        eventBox.GetComponent<EventBox>().levelComplete();
     }
 
 }

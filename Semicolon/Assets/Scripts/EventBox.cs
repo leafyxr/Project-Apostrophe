@@ -17,16 +17,30 @@ public class EventBox : MonoBehaviour {
     public string nextScene;//Next Level Scene
     public string currentScene;//Current Level Scene
     private string loadScene;//Scene to be loaded when button clicked
-
+    public void pauseGame(bool paused)
+    {
+        loadScene = currentScene;
+        UI.SetActive(!paused);
+        if (paused) 
+        {
+            Time.timeScale = 0;
+            eventText.GetComponent<Text>().text = "Game Paused\nPress Esc to Continue";
+            sceneButton.GetComponent<Text>().text = "Restart Level";
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
+    }
     void gameOver()
     {
         Time.timeScale = 0;
         UI.SetActive(false);
         eventText.GetComponent<Text>().text = "Game Over! \n Please try again";
-        sceneButton.GetComponent<Text>().text = "Restart";
+        sceneButton.GetComponent<Text>().text = "Restart Level";
         loadScene = currentScene;
     }
-    void levelComplete()
+    public void levelComplete()
     {
         Time.timeScale = 0;
         UI.SetActive(false);
