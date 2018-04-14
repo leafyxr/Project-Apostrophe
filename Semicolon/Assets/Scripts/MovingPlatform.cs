@@ -7,27 +7,29 @@ public class MovingPlatform : MonoBehaviour {
     public float Amplitude = 0.5f;
     public float Frequency = 1f;
     public bool Vertical;
-    [SerializeField]
-    GameObject Player;
     // Use this for initialization
     void Start () {
-		
-	}
+        
+
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (Vertical)
+        if (Time.timeScale != 0)
         {
-            tempPos = transform.position;
-            tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * Frequency) * Amplitude;
-            transform.position = tempPos;
-        }
-        else
-        {
-            tempPos = transform.position;
-            tempPos.x += Mathf.Sin(Time.fixedTime * Mathf.PI * Frequency) * Amplitude;
-            transform.position = tempPos;
+            if (Vertical)
+            {
+                tempPos = transform.position;
+                tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * Frequency) * Amplitude;
+                transform.position = tempPos;
+            }
+            else
+            {
+                tempPos = transform.position;
+                tempPos.x += Mathf.Sin(Time.fixedTime * Mathf.PI * Frequency) * Amplitude;
+                transform.position = tempPos;
+            }
         }
     }
 
@@ -35,7 +37,7 @@ public class MovingPlatform : MonoBehaviour {
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Player.transform.parent = this.transform;
+            collision.gameObject.transform.parent = this.transform;
         }
     }
 
@@ -43,7 +45,7 @@ public class MovingPlatform : MonoBehaviour {
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Player.transform.parent = null;
+            collision.gameObject.transform.parent = null;
         }
     }
 }

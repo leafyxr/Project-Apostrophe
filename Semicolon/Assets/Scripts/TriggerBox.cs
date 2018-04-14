@@ -13,8 +13,11 @@ public class TriggerBox : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Trigger.SetActive(true);
-        Destroy(gameObject, 1f);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Trigger.SetActive(true);
+            Destroy(gameObject, 1f);
+        }
     }
 
     // Update is called once per frame

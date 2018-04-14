@@ -7,6 +7,7 @@ public class DialogueTrigger : MonoBehaviour {
     public DialogueController controller;
     private int index;
     public bool active;
+
     private void Start()
     {
         active = true;
@@ -18,6 +19,7 @@ public class DialogueTrigger : MonoBehaviour {
     }
     public void sendDialouge()
     {
+
         Debug.Log(index + " / " + dialouge.Length);
         if (index >= dialouge.Length)
         {

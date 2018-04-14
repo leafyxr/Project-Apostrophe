@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Hazard : MonoBehaviour {
-    [SerializeField]
-    GameObject Player;
     public int DamageTaken = 1;
 	// Use this for initialization
 	void Start () {
@@ -17,10 +15,16 @@ public class Hazard : MonoBehaviour {
 	}
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Player.SendMessage("takeDamage", DamageTaken);
+        if (collision.gameObject.CompareTag("Player")){
+ collision.gameObject.SendMessage("takeDamage", DamageTaken);
+        }
+       
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Player.SendMessage("takeDamage", DamageTaken);
+        if (collision.gameObject.CompareTag("Player")){
+collision.gameObject.SendMessage("takeDamage", DamageTaken);
+        }
+        
     }
 }

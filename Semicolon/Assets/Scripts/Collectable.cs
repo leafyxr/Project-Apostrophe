@@ -3,16 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Collectable : MonoBehaviour {
-
-    [SerializeField]
-    GameObject Player;
     private bool bIsCollected;
     Vector2 tempPos = new Vector2();
     public float hoverAmplitude = 0.5f;
     public float hoverFrequency = 1f;
     public bool healthup;
-
-
+   
     // Use this for initialization
     void Start () {
         bIsCollected = false;
@@ -24,23 +20,33 @@ public class Collectable : MonoBehaviour {
         {
             Destroy(gameObject,.1f);
         }
-        tempPos = transform.position;
+        if (Time.timeScale != 0)
+        {
+tempPos = transform.position;
         tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * hoverFrequency) * hoverAmplitude;
         transform.position = tempPos;
+        }
+        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!bIsCollected)
+        if (collision.gameObject.CompareTag("Player")){
+if (!bIsCollected)
         {
+           
             bIsCollected = true;
             if (healthup)
             {
-                Player.GetComponent<PlayerPlatformerController>().SendMessage("healthPickup");
+
+                    collision.gameObject.GetComponent<PlayerPlatformerController>().SendMessage("healthPickup");
             }
             else
             {
-                Player.GetComponent<PlayerPlatformerController>().SendMessage("getCollectable");
+
+                    collision.gameObject.GetComponent<PlayerPlatformerController>().SendMessage("getCollectable");
             }
         }
     }
+        }
+        
 }

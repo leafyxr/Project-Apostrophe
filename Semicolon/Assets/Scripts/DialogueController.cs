@@ -12,6 +12,7 @@ public class DialogueController : MonoBehaviour {
     [SerializeField]
     GameObject eventBox;
     private bool paused;
+    
 
     // Use this for initialization
     void Start () {

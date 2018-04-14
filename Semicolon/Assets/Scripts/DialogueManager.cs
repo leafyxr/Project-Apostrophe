@@ -9,6 +9,8 @@ public class DialogueManager : MonoBehaviour {
     public bool active;
     private Queue<string> dialoguetext;
     public Animator animator;
+    public AudioClip typesound;
+    public AudioClip newline;
     // Use this for initialization
     void Start()
     {
@@ -31,6 +33,7 @@ public class DialogueManager : MonoBehaviour {
     }
     public void displayNextLine()
     {
+        GetComponent<AudioSource>().PlayOneShot(newline);
         if (dialoguetext.Count == 0)
         {
             endDialogue();
@@ -46,8 +49,9 @@ public class DialogueManager : MonoBehaviour {
         displayText.text = "";
         foreach(char letter in text.ToCharArray())
         {
+            GetComponent<AudioSource>().PlayOneShot(typesound);
             displayText.text += letter;
-            yield return null;
+            yield return new WaitForSeconds(0.08f);
         }
     }
 

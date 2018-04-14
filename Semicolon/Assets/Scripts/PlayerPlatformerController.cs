@@ -22,6 +22,11 @@ public class PlayerPlatformerController : PhysicsObject
     private float airTime;
     public float maxFallSpeed = 7;
     private bool paused;
+    public AudioClip walk;
+    public AudioClip jump;
+    public AudioClip healthup;
+    public AudioClip itemup;
+    public AudioClip damaged;
     void Awake()//Start
     {
         paused = false;
@@ -34,6 +39,7 @@ public class PlayerPlatformerController : PhysicsObject
     {
         if (Input.GetButtonDown("Pause"))
         {
+            
             paused = !paused;
             eventBox.SetActive(true);
             eventBox.GetComponent<EventBox>().pauseGame(paused);
@@ -46,11 +52,17 @@ public class PlayerPlatformerController : PhysicsObject
         Vector2 move = Vector2.zero;//default move speed if no input
 
         move.x = Input.GetAxis("Horizontal");//move speed altered by horizontal inputs
-
+        if (move.x != 0 && !GetComponent<AudioSource>().isPlaying)
+        {
+            GetComponent<AudioSource>().PlayOneShot(walk);
+        }
         if (Input.GetButtonDown("Jump"))//if jump input pressed
         {
+            
             if (grounded)//when start on ground
             {
+                
+                GetComponent<AudioSource>().PlayOneShot(jump);
                 iNumberOfJumpsTaken = 0;//no jump taken
                 velocity.y = fJumpSpeed;//launch
                 iNumberOfJumpsTaken++;
@@ -58,9 +70,12 @@ public class PlayerPlatformerController : PhysicsObject
             }
             else if (bJump)// if not grounded and no reached maximum jumps
             {
+                
+                GetComponent<AudioSource>().PlayOneShot(jump);
                 velocity.y = (0.8f*fJumpSpeed);//second jump slower than first
                 iNumberOfJumpsTaken++;
                 bJump = iNumberOfJumpsAllowed > iNumberOfJumpsTaken;
+                
             }
         }
 
@@ -100,7 +115,8 @@ public class PlayerPlatformerController : PhysicsObject
 
     public void takeDamage(int iDamage)
     {
-        CurrentHealth=CurrentHealth-iDamage;
+        GetComponent<AudioSource>().PlayOneShot(damaged);
+        CurrentHealth =CurrentHealth-iDamage;
         if (CurrentHealth <= 0)
         {
             eventBox.SetActive(true);
@@ -110,10 +126,12 @@ public class PlayerPlatformerController : PhysicsObject
 
     void getCollectable()
     {
+        GetComponent<AudioSource>().PlayOneShot(healthup);
         iCollectables++;
     }
     public void healthPickup()
     {
+        GetComponent<AudioSource>().PlayOneShot(itemup);
         if (CurrentHealth < 5)
         {
             CurrentHealth++;
