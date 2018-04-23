@@ -21,13 +21,13 @@ public class MovingPlatform : MonoBehaviour {
             if (Vertical)
             {
                 tempPos = transform.position;
-                tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * Frequency) * Amplitude;
+                tempPos.y += Mathf.Sin(Time.timeSinceLevelLoad * Mathf.PI * Frequency) * Amplitude;
                 transform.position = tempPos;
             }
             else
             {
                 tempPos = transform.position;
-                tempPos.x += Mathf.Sin(Time.fixedTime * Mathf.PI * Frequency) * Amplitude;
+                tempPos.x += Mathf.Sin(Time.timeSinceLevelLoad * Mathf.PI * Frequency) * Amplitude;
                 transform.position = tempPos;
             }
         }

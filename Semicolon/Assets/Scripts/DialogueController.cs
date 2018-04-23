@@ -12,8 +12,7 @@ public class DialogueController : MonoBehaviour {
     [SerializeField]
     GameObject eventBox;
     private bool paused;
-    
-
+  
     // Use this for initialization
     void Start () {
         paused = false;
@@ -21,7 +20,7 @@ public class DialogueController : MonoBehaviour {
     }
     // Update is called once per frame
     void Update () {
-        dialogueActive = dialogueManager.active;
+    dialogueActive = dialogueManager.active;
         if (Input.GetButtonDown("Pause"))
         {
             paused = !paused;

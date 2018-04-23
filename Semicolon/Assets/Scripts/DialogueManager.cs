@@ -61,3 +61,4 @@ public class DialogueManager : MonoBehaviour {
         GetComponent<DialogueTrigger>().sendDialouge();
     }
 }
+

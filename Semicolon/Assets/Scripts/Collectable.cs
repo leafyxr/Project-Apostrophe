@@ -23,7 +23,7 @@ public class Collectable : MonoBehaviour {
         if (Time.timeScale != 0)
         {
 tempPos = transform.position;
-        tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * hoverFrequency) * hoverAmplitude;
+        tempPos.y += Mathf.Sin(Time.timeSinceLevelLoad * Mathf.PI * hoverFrequency) * hoverAmplitude;
         transform.position = tempPos;
         }
         

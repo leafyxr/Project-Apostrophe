@@ -29,6 +29,7 @@ public class PlayerPlatformerController : PhysicsObject
     public AudioClip damaged;
     void Awake()//Start
     {
+        Application.targetFrameRate = 30;
         paused = false;
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
