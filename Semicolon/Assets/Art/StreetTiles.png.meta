@@ -1,0 +1,414 @@
+fileFormatVersion: 2
+guid: 918f90cf6c32a4c409fc93264217ce8b
+timeCreated: 1524525566
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: StreetTiles_0
+    21300002: StreetTiles_1
+    21300004: StreetTiles_2
+    21300006: StreetTiles_3
+    21300008: StreetTiles_4
+    21300010: StreetTiles_5
+    21300012: StreetTiles_6
+    21300014: StreetTiles_7
+    21300016: StreetTiles_8
+    21300018: StreetTiles_9
+    21300020: StreetTiles_10
+    21300022: StreetTiles_11
+    21300024: StreetTiles_12
+    21300026: StreetTiles_13
+    21300028: StreetTiles_14
+    21300030: StreetTiles_15
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 16
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 2
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: StreetTiles_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -5, y: -8}
+        - {x: 5, y: -8}
+        - {x: 5, y: -2}
+        - {x: 4, y: 8}
+        - {x: -4, y: 8}
+        - {x: -5, y: -6}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: StreetTiles_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -4, y: 8}
+        - {x: -5, y: 5}
+        - {x: -5, y: -3}
+        - {x: -4, y: -4}
+        - {x: 4, y: -4}
+        - {x: 5, y: -2}
+        - {x: 5, y: 5}
+        - {x: 4, y: 8}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: StreetTiles_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 4, y: -8}
+        - {x: 4, y: 8}
+        - {x: -4, y: 8}
+        - {x: -4, y: -8}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: StreetTiles_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -4, y: 8}
+        - {x: -5, y: 7}
+        - {x: -5, y: -2}
+        - {x: -4, y: -8}
+        - {x: 4, y: -8}
+        - {x: 5, y: -7}
+        - {x: 5, y: 8}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: StreetTiles_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -4, y: 8}
+        - {x: -5, y: 7}
+        - {x: -5, y: -2}
+        - {x: -4, y: -8}
+        - {x: 4, y: -8}
+        - {x: 5, y: -7}
+        - {x: 5, y: 8}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: StreetTiles_5
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -6, y: 8}
+        - {x: -8, y: 6}
+        - {x: -8, y: -6}
+        - {x: -6, y: -8}
+        - {x: 6, y: -8}
+        - {x: 8, y: -6}
+        - {x: 8, y: 6}
+        - {x: 6, y: 8}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: StreetTiles_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -6, y: 8}
+        - {x: -8, y: 6}
+        - {x: -8, y: -6}
+        - {x: -6, y: -8}
+        - {x: 6, y: -8}
+        - {x: 8, y: -6}
+        - {x: 8, y: 6}
+        - {x: 6, y: 8}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: StreetTiles_7
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -7.7918816, y: -1.5042038}
+        - {x: -8, y: -8}
+        - {x: 8, y: -8}
+        - {x: 7.930626, y: -1.5042}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: StreetTiles_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 8}
+        - {x: -8, y: -8}
+        - {x: 8, y: -8}
+        - {x: 8, y: 8}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: StreetTiles_9
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 8}
+        - {x: -8, y: -8}
+        - {x: 8, y: -8}
+        - {x: 8, y: 8}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: StreetTiles_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 8}
+        - {x: -8, y: -8}
+        - {x: 8, y: -8}
+        - {x: 8, y: 8}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: StreetTiles_11
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 8}
+        - {x: -8, y: -8}
+        - {x: 8, y: -8}
+        - {x: 8, y: 8}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: StreetTiles_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 8}
+        - {x: -8, y: -8}
+        - {x: 8, y: -8}
+        - {x: 8, y: 8}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: StreetTiles_13
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -5.849415, y: 6.9593945}
+        - {x: -6.057535, y: -5.681898}
+        - {x: 0.28424263, y: -4.739435}
+        - {x: 5.918787, y: -5.918789}
+        - {x: 5.988161, y: 7.0287685}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: StreetTiles_14
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -2.906952, y: 7.306263}
+        - {x: -4.887398, y: 4.8680706}
+        - {x: -4.918789, y: -6.8900204}
+        - {x: 4.167515, y: -7.167515}
+        - {x: 3.988163, y: 5.0016556}
+        - {x: 2.0863037, y: 7.0981407}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: StreetTiles_15
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 3.7410927, y: 5.0863037}
+        - {x: -4.849415, y: 4.988163}
+        - {x: -3.9475555, y: -4.988161}
+        - {x: 2.9881592, y: -5.1810093}
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -14,11 +14,16 @@ public class EventBox : MonoBehaviour {
     GameObject eventText;
     [SerializeField]
     GameObject UI;
+    public bool bInstantLevelEnd;
     public string nextScene;//Next Level Scene
     public string currentScene;//Current Level Scene
     private string loadScene;//Scene to be loaded when button clicked
     public AudioClip deathsound;
     public AudioClip winsound;
+    private void Start()
+    {
+        
+    }
     public void pauseGame(bool paused)
     {
         loadScene = currentScene;
@@ -59,6 +64,11 @@ public class EventBox : MonoBehaviour {
     }
     public void levelComplete()
     {
+        if (bInstantLevelEnd)
+        {
+            loadScene = nextScene;
+            ChangeScene();
+        }
         AudioSource[] allaudio = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
         foreach (AudioSource audio in allaudio)
         {
@@ -74,8 +84,8 @@ public class EventBox : MonoBehaviour {
     }
     public void ChangeScene()
     {
-        SceneManager.LoadScene(loadScene);
         Time.timeScale = 1;
+        SceneManager.LoadScene(loadScene);
     }
     public void exitGame()
     {

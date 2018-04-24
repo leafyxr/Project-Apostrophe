@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class DialogueController : MonoBehaviour {
     public DialogueTrigger dialogue;
+    public PlayerPlatformerController Player;
     public DialogueManager dialogueManager;
     public bool dialogueActive;
     public string nextScene;
@@ -15,6 +16,7 @@ public class DialogueController : MonoBehaviour {
   
     // Use this for initialization
     void Start () {
+        Player.enabled = false;
         paused = false;
         eventBox.SetActive(false);
     }
@@ -48,8 +50,8 @@ public class DialogueController : MonoBehaviour {
 
     public void endScene()
     {
-        eventBox.SetActive(true);
-        eventBox.GetComponent<EventBox>().levelComplete();
+        Player.enabled = true;
+        GetComponent<DialogueController>().enabled = false;
     }
 
 }

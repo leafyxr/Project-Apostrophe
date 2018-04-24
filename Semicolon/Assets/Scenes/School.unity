@@ -384,7 +384,7 @@ Prefab:
     - target: {fileID: 114825409681346904, guid: d21d56d96b3447c41920b12dac16514e,
         type: 2}
       propertyPath: nextScene
-      value: TestDialouge
+      value: Street
       objectReference: {fileID: 0}
     - target: {fileID: 114806753002498210, guid: d21d56d96b3447c41920b12dac16514e,
         type: 2}
@@ -398,6 +398,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1463163506022878, guid: d21d56d96b3447c41920b12dac16514e, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114825409681346904, guid: d21d56d96b3447c41920b12dac16514e,
+        type: 2}
+      propertyPath: bInstantLevelEnd
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -553,7 +558,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -578656005
+  m_SortingLayerID: -1780170217
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 222df500d3818e149b312e97cd9e74f5, type: 3}
@@ -956,6 +961,26 @@ Prefab:
         type: 2}
       propertyPath: fDelay
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 212667625855292588, guid: ac37b29a65ec42d4ba1079e145c52731,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1780170217
+      objectReference: {fileID: 0}
+    - target: {fileID: 212667625855292588, guid: ac37b29a65ec42d4ba1079e145c52731,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 212985588968794288, guid: ac37b29a65ec42d4ba1079e145c52731,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1780170217
+      objectReference: {fileID: 0}
+    - target: {fileID: 212985588968794288, guid: ac37b29a65ec42d4ba1079e145c52731,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac37b29a65ec42d4ba1079e145c52731, type: 2}
@@ -38081,6 +38106,16 @@ Prefab:
         type: 2}
       propertyPath: m_TileSpriteArray.Array.data[7].m_Data
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664157345718670800, guid: 923aad8c751ae154fb3192d0f84f65b1,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1780170217
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664157345718670800, guid: 923aad8c751ae154fb3192d0f84f65b1,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 923aad8c751ae154fb3192d0f84f65b1, type: 2}

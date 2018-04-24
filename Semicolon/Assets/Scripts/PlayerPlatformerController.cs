@@ -27,6 +27,11 @@ public class PlayerPlatformerController : PhysicsObject
     public AudioClip healthup;
     public AudioClip itemup;
     public AudioClip damaged;
+
+    private void OnLevelWasLoaded(int level)
+    {
+        Time.timeScale = 1;
+    }
     void Awake()//Start
     {
         Application.targetFrameRate = 30;
